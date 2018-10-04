@@ -11,6 +11,11 @@
     
     
     <select id="getUserById" resultType="com.kaka.bean.User">
-    select * from t_user where id = #{id}
-  </select>
+        select * from t_user
+        where
+        <if test="id != null">
+          id = #{id}
+        </if>
+    id = #{id}
+    </select>
 </mapper>
